@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K S Polytechnic — Pathway Subjects Dashboard (5th Sem)</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">KS</div>
+        <div class="titles">
+          <h1>Pathway Subjects Dashboard</h1>
+          <p>Diploma — 5th Semester | CIE &amp; SEE Assessment Management</p>
+        </div>
+      </div>
+      <div class="controls">
+        <label class="control">
+          <span>Role</span>
+          <select id="roleSelect">
+            <option value="teacher">Teacher</option>
+            <option value="hod">HOD</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Branch</span>
+          <select id="branchSelect">
+            <option value="All">All</option>
+            <option>Mechanical</option>
+            <option>Electronics</option>
+            <option>Automobiles</option>
+            <option>Civil</option>
+            <option>Computer Science</option>
+          </select>
+        </label>
+        <button id="exportBtn" class="btn primary" title="HOD can export CSV of the visible list">Export CSV</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel card">
+        <div class="panel-header">
+          <h2>Upload / Manage Students</h2>
+          <div class="actions">
+            <input type="file" id="uploadCsv" accept=".csv" />
+            <button id="downloadTemplate" class="btn">Download CSV Template</button>
+          </div>
+        </div>
+        <p class="muted small">
+          Upload a CSV with columns: <strong>USN,Name,Branch</strong>.
+          Then enter assessment marks below. Max marks are enforced as per the scheme (Total = 240).
+        </p>
+        <div class="table-wrap">
+          <table id="studentsTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>USN</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th title="CIE 1 — Written & Practice (30)">Wk3 CIE1 (30)</th>
+                <th title="CIE 2 — Written & Practice (30)">Wk5 CIE2 (30)</th>
+                <th title="CIE 3 — Written & Practice (30)">Wk7 CIE3 (30)</th>
+                <th title="CIE 4 — Written & Practice (30)">Wk9 CIE4 (30)</th>
+                <th title="CIE 5 — Written & Practice (30)">Wk11 CIE5 (30)</th>
+                <th title="Online course with certificate (40)">Online (40)</th>
+                <th title="Profile building / Project synopsis (20)">Profile (20)</th>
+                <th title="Portfolio evaluation (30)">Portfolio (30)</th>
+                <th>Total (240)</th>
+                <th>%</th>
+                <th class="only-hod">Lock</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody id="studentsBody">
+              <!-- rows injected by JS -->
+            </tbody>
+          </table>
+        </div>
+        <div class="row add-row">
+          <input id="addUSN" placeholder="USN"/>
+          <input id="addName" placeholder="Student Name"/>
+          <select id="addBranch">
+            <option>Mechanical</option>
+            <option>Electronics</option>
+            <option>Automobiles</option>
+            <option>Civil</option>
+            <option>Computer Science</option>
+          </select>
+          <button id="addBtn" class="btn">+ Add Student</button>
+        </div>
+      </section>
+
+      <section class="panel grid">
+        <div class="card info">
+          <h3>Assessment Scheme</h3>
+          <ul>
+            <li>Week 3 — CIE 1 (30)</li>
+            <li>Week 5 — CIE 2 (30)</li>
+            <li>Week 7 — CIE 3 (30)</li>
+            <li>Week 9 — CIE 4 (30)</li>
+            <li>Week 11 — CIE 5 (30)</li>
+            <li>Online Course with Certificate (40)</li>
+            <li>Profile Building / Project Synopsis (20)</li>
+            <li>Portfolio Evaluation (30)</li>
+          </ul>
+          <p class="muted">Grand Total: <strong>240</strong></p>
+        </div>
+
+        <div class="card stats">
+          <h3>Quick Stats (Filtered)</h3>
+          <div class="kpis">
+            <div class="kpi"><div class="value" id="kCount">0</div><div class="label">Students</div></div>
+            <div class="kpi"><div class="value" id="kAvg">0</div><div class="label">Avg Total</div></div>
+            <div class="kpi"><div class="value" id="kCompletion">0%</div><div class="label">Completion</div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© K S Polytechnic — Internal use | Developed by Mr. Sudhindra Umarji, Faculty CSE DEPT, K S Polytechnic</div>
+      <div class="muted small">Tip: Switch role to <strong>HOD</strong> to lock marks and export branch-wise CSV.</div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

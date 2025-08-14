@@ -1,0 +1,124 @@
+Here’s a clear, step-by-step guide for using your Pathway Subjects Dashboard (5th Sem).
+
+1) Open the dashboard
+
+Download and unzip: KS_Pathway_Dashboard_Final_v2.zip
+– Download
+
+Double-click index.html to open it in Chrome/Edge (recommended).
+
+2) Choose your role & branch
+
+Top-right controls:
+
+Role: pick Teacher or HOD.
+
+Branch: filter by Mechanical, Electronics, Automobiles, Civil, Computer Science, or All.
+(All stats, table rows, and exports apply to the selected filter.)
+
+3) Load your student list
+
+You have two options:
+
+A. Upload CSV
+
+Click Upload / Manage Students → Choose File.
+
+Select a CSV with header row:
+USN,Name,Branch
+
+Branch values must match exactly one of:
+Mechanical, Electronics, Automobiles, Civil, Computer Science.
+
+After upload, the students appear in the table.
+
+B. Add students manually
+
+Use the + Add Student row below the table.
+
+Enter USN, Name, select Branch, click + Add Student.
+
+Tip: Use Download CSV Template to get a ready format.
+
+4) Enter assessment marks
+
+Columns:
+
+CIE1–CIE5 (Week 3/5/7/9/11): each max 30
+
+Online Course: max 40
+
+Profile/Synopsis: max 20
+
+Portfolio: max 30
+
+As you type:
+
+The dashboard calculates Total (out of 240) and %.
+
+Strict validation:
+
+Only numbers allowed.
+
+Values below 0 or above the max are denied with an alert and the field reverts to the previous valid value.
+
+5) Locking (HOD only)
+
+In HOD role, each row shows a Lock checkbox.
+
+When locked:
+
+Teachers cannot edit that student’s marks.
+
+HOD can unlock anytime.
+
+6) Export CSV (HOD only)
+
+Set the Branch filter to the cohort you want (or All).
+
+Click Export CSV.
+
+A file like KS_Pathway_Computer Science_Export.csv downloads, containing:
+USN,Name,Branch,CIE1..CIE5,Online,Profile,Portfolio,Total,Percentage,Locked
+
+7) Quick Stats panel
+
+Students: count in the current filter.
+
+Avg Total: average total marks (0–240) across visible students.
+
+Completion: average % of filled assessment fields across visible students.
+
+8) Edit / remove students
+
+Edit any cell directly (subject to role/lock).
+
+Use the × Remove button at the end of a row to delete a student.
+
+Locked rows can only be removed by HOD.
+
+9) Data tips & best practices
+
+Keep backups: after major updates, do an Export CSV.
+
+CSV hygiene:
+
+Keep only three columns in the upload file: USN,Name,Branch.
+
+No extra commas or blank lines.
+
+Ensure Branch names match the dropdown options exactly.
+
+Duplicates: the app doesn’t merge duplicate USNs—remove manually if needed.
+
+Browser refresh: this version is in-memory. If you refresh/close the page, re-upload your CSV to continue.
+
+10) Troubleshooting
+
+“Invalid entry” alert: value is non-numeric, negative, or above the allowed max—re-enter within range.
+
+Export button disabled: switch Role to HOD.
+
+Can’t edit a row: it’s Locked—ask HOD to unlock or switch to HOD role.
+
+Nothing exported: check your Branch filter—there must be at least one visible record.
