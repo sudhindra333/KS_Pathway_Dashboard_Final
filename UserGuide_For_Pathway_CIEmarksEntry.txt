@@ -2,10 +2,9 @@ Here’s a clear, step-by-step guide for using your Pathway Subjects Dashboard (
 
 1) Open the dashboard
 
-Download and unzip: KS_Pathway_Dashboard_Final_v2.zip
-– Download
+https://ks-pathway-dashboard-final-sltj.vercel.app/
 
-Double-click index.html to open it in Chrome/Edge (recommended).
+to open it in Chrome/Edge (recommended).
 
 2) Choose your role & branch
 
@@ -120,5 +119,6 @@ Browser refresh: this version is in-memory. If you refresh/close the page, re-up
 Export button disabled: switch Role to HOD.
 
 Can’t edit a row: it’s Locked—ask HOD to unlock or switch to HOD role.
+
 
 Nothing exported: check your Branch filter—there must be at least one visible record.
